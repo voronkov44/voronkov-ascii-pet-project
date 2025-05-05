@@ -1,0 +1,15 @@
+# Системные файлы
+.DS_Store
+
+# Файлы IDE
+.idea/
+*.iml
+
+# Логи и зависимости
+node_modules/
+*.log
+
+# Environment files
+.env
+.env.local
+EOF

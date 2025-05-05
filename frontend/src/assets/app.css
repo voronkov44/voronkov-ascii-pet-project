@@ -1,0 +1,150 @@
+body {
+    background-color: #0c151d;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.title {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.display-card {
+    background-color: #444447;
+    border-radius: 18px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+    top: -45px;
+
+
+    border: 2px solid #83889a;
+    box-shadow: 0 0 20px rgba(207, 211, 230, 0.3); /* Светящийся эффект */
+}
+
+.label {
+    color: #f0f0f0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ascii-display,
+.description-display {
+    background-color: #515153;
+    color: #ffffff;
+    border-radius: 14px;
+    padding: 12px;
+    font-family: monospace;
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 6px;
+    min-width: 150px;
+    min-height: 150px;
+    box-sizing: border-box;
+    overflow: auto;
+    flex: 1;
+    border: 2px solid #83889a;
+}
+
+.description-display {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    min-height: 85px;
+}
+
+.copy-icon {
+    cursor: pointer;
+    color: #ddd;
+    transition: color 0.3s;
+    font-size: 16px;
+    margin-left: 6px;
+}
+
+.copy-icon:hover {
+    color: #fff;
+}
+
+.delete-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.delete-icon:hover {
+    color: #ff4d4f;
+}
+
+.form-card {
+    background-color: #1f2a3c;
+    border-radius: 18px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 60px;
+    position: relative;
+    top: -45px;
+
+    border: 2px solid #5d8bf4;
+    box-shadow: 0 0 20px rgba(93, 139, 244, 0.3);
+}
+
+.ascii-input,
+.description-input {
+    width: 100%;
+    background-color: #2e384d;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    padding: 14px;
+    font-family: monospace;
+    font-size: 14px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.description-input {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    min-height: 50px;
+}
+
+.save-button {
+    align-self: flex-start;
+    border-radius: 12px;
+    padding: 10px 20px;
+}

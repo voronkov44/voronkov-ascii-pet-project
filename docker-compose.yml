@@ -1,0 +1,19 @@
+services:
+  backend:
+    build: ./backend
+    container_name: ascii-pet-backend
+    ports:
+      - "8000"
+    networks:
+      - ascii-pet-net
+
+  frontend:
+    build: ./frontend
+    container_name: ascii-pet-frontend
+    ports:
+      - "127.0.0.1:80:80"
+    networks:
+      - ascii-pet-net
+
+networks:
+  ascii-pet-net:
