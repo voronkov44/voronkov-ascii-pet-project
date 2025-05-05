@@ -11,7 +11,7 @@ services:
     build: ./frontend
     container_name: ascii-pet-frontend
     ports:
-      - "127.0.0.1:80:80"
+      - "${HOST_IP}:80:80"
     networks:
       - ascii-pet-net
 
