@@ -17,9 +17,9 @@ const docTemplate = `{
         "version": "{{.Version}}"
     },
     "host": "{{.Host}}",
-    "basePath": "{{.BasePath}}",
+    "basePath": "/v1",
     "paths": {
-        "/v1/pet": {
+        "/pet": {
             "get": {
                 "description": "Возвращает сохранённый pet в формате JSON",
                 "produces": [

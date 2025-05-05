@@ -9,7 +9,7 @@ definitions:
         example: Милый котик
         type: string
     type: object
-host: localhost:8000
+host: localhost:8000/v1
 info:
   contact:
     email: voronkovworkemail@gmail.com
@@ -19,7 +19,7 @@ info:
   title: Pet API
   version: "1.0"
 paths:
-  /v1/pet:
+  /pet:
     delete:
       description: Удаляет pet файл
       produces:
