@@ -1,4 +1,4 @@
-# ASCII-PET TATLIN.Object
+# ASCII-PET
 Приложение для загрузки и просмотра изображений питомцев в ASCII формате.
 
 ## Стек
@@ -10,33 +10,61 @@
 
 ### 1. Клонирование репозитория
 ```bash
-git clone https://github.com/voronkov44/voronkov-ascii-pet-project
+git clone https://github.com/voronkov44/voronkov-ascii-pet-project.git
 ```
 
 ### 2. Переход в корневую директорию 
 ```bash
 cd voronkov-ascii-pet-project
 ```
+### 3. Настройка переменных окружения
+Перед запуском убедитесь, что в корне проекта существует файл .env с параметром:
+```ini
+HOST_IP=127.0.0.1
+```
+Вы можете изменить IP, с которым будет работать проект, с помощью скрипта запуска, либо явно указать в .env-файле и запустить командой 4.2
 
-### 3. Сборка и запуск контейнеров
-*Требуется установка [docker](https://www.docker.com/products/docker-desktop/), если не установлен, смотрите [зависимости](https://github.com/voronkov44/voronkov-ascii-pet-project/tree/main?tab=readme-ov-file#%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8)*
-#### Для сборки и запуска проекта
+
+
+### 4. Сборка и запуск проекта
+*Требуется установка [docker](https://www.docker.com/products/docker-desktop/) и [docker-compose](https://docs.docker.com/compose/), если не установлен, смотрите [зависимости](https://github.com/voronkov44/voronkov-ascii-pet-project/tree/main?tab=readme-ov-file#%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8)*
+#### 4.1 Для сборки и запуска проекта, через баш-скрипт
 ```bash
-docker-compose up --build
+./run.sh
+```
+Скрипт автоматически:
+- Запросит у вас IP-адрес, на котором вы хотите собрать контейнеры
+- Подставит его в .env
+- Соберет и запустит проект в Docker-контейнерах в режиме detached
+
+#### 4.2 Для сборки и запуска проекта, через docker-compose
+```bash
+docker-compose up --build -d
+```
+*требуется указать IP-адрес в .env файле, на котором вы хотите собрать контейнеры*
+
+#### 4.3 Остановка контейнеров
+```bash
+docker-compose stop
 ```
 
-#### Остановка проекта
-Нажмите `Ctrl + C` в консоли, где запушен `docker-compose`, для остановки
+#### 4.4 Запуск собранных контейнеров
+```bash
+docker-compose start
+```
 
-#### Полная остановка и удаления контейнеров
+#### 4.5 Полная остановка и удаления контейнеров
 ```bash
 docker-compose down
 ```
 
-## Адреса
-- Frontend (SPA) - ```http://localhost:5173/```
-- Backend (API) - ```http://localhost:8080/```
-- Swagger документация - ```http://localhost:8080/swagger/index.html```
+## Порты
+- Frontend (SPA) - ```:5173```
+- Backend (API) - ```:8000/```
+- Nginx (Proxy) - ```:80```
+
+## Swagger
+- Swagger документация доступна по адресу - ```http://ip-адрес, который вы указали в .env/swagger/index.html```
 
 ## Отличие от ТЗ
 ### 1. В первоначальном ТЗ в спецификации Swagger были предусмотрены только методы PUT и GET для работы с изображениями.
@@ -61,4 +89,5 @@ docker-compose down
 
 ## **Зависимости**
 Установка пакета [Docker Engine](https://docs.docker.com/engine/install/)
+Установка пакета [Docker Compose](https://docs.docker.com/compose/install/)
 
