@@ -11,12 +11,14 @@ fi
 
 # Замена
 if grep -q "^HOST_IP=" .env; then
-  sed -i '' "s/^HOST_IP=.*/HOST_IP=$new_ip/" .env
+  sed -i  "s/^HOST_IP=.*/HOST_IP=$new_ip/" .env
 else
-  echo "HOST_IP=$new_ip" >> .env
+  echo "HOST_IP=$new_ip" > .env
 fi
 
 echo "Новый IP адрес установлен: $new_ip"
+
+. .env
 
 # Сборка и запуск
 docker-compose up --build -d
