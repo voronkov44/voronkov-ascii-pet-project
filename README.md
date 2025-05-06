@@ -22,7 +22,7 @@ cd voronkov-ascii-pet-project
 ```ini
 HOST_IP=127.0.0.1
 ```
-Вы можете изменить IP, с которым будет работать проект, автоматически с помощью скрипта запуска, либо явно указать в .env-файле и запустить (вручную)[https://github.com/voronkov44/voronkov-ascii-pet-project/blob/main/README.md#%D0%BE%D0%BF%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D0%B0-%D0%B2%D1%80%D1%83%D1%87%D0%BD%D1%83%D1%8E]
+Вы можете изменить IP, с которым будет работать проект, автоматически с помощью скрипта запуска, либо явно указать в .env-файле и запустить [вручную](https://github.com/voronkov44/voronkov-ascii-pet-project/blob/main/README.md#%D0%BE%D0%BF%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D0%B0-%D0%B2%D1%80%D1%83%D1%87%D0%BD%D1%83%D1%8E)
 
 
 
