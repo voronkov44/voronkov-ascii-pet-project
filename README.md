@@ -91,6 +91,12 @@ docker-compose up --build -d
 
 <img width="1237" alt="image" src="https://github.com/user-attachments/assets/9697f42e-0730-4efc-aa64-7406d287eb6f" />
 
+*Проверка swagger*
+
+
+![image](https://github.com/user-attachments/assets/cc919a77-7f87-4842-b293-b0e092c4d316)
+
+
 
 ### Пример использования ручного поднятия:
 
@@ -107,6 +113,14 @@ docker-compose up --build -d
 *Видим что контейнеры стартовали, значит можно переходить в браузер и вводить нужный ip-адрес*
 
 <img width="1224" alt="image" src="https://github.com/user-attachments/assets/a738d6ed-250e-4efe-a0b9-0eb25fc40c9b" />
+
+*Проверка swagger*
+
+
+![image](https://github.com/user-attachments/assets/5a5e10f0-6249-42e5-b65e-5a1f80f4bd32)
+
+
+
 
 
 ## Порты
