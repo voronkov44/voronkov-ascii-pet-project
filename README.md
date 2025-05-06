@@ -28,31 +28,23 @@ HOST_IP=127.0.0.1
 
 ### 4. Сборка и запуск проекта
 *Требуется установка [docker](https://www.docker.com/products/docker-desktop/) и [docker-compose](https://docs.docker.com/compose/), если не установлен, смотрите [зависимости](https://github.com/voronkov44/voronkov-ascii-pet-project/tree/main?tab=readme-ov-file#%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8)*
-#### 4.1. Для сборки и запуска проекта, *автоматически*, через баш-скрипт:
+
+#### 4.1. Автоматическая сборка и запуск проекта, через баш-скрипт:
+В зависимости от ОС, запустите нужный скрипт, если на Linux:
 ```bash
-./run.sh
+./run_linux.sh
 ```
-#### После сборки контейнеров, откройте браузер, указав в нем ip-адрес, который вы ввели в скрипте
+Если на MacOS:
+```bash
+./run_mac.sh
+```
 
 Скрипт автоматически:
 - Запросит у вас IP-адрес, на котором вы хотите собрать контейнеры
 - Подставит его в .env
 - Соберет и запустит проект в Docker-контейнерах в режиме detached
 
-#### 4.2. Для сборки и запуска проекта, *вручную*, через docker-compose:
-Подгружаем .env файл
-```bash
-. .env
-```
-
-После собираем и поднимаем контейнеры
-
-```bash
-docker-compose up --build -d
-```
-*требуется указать IP-адрес в .env файле, на котором вы хотите собрать контейнеры*
-
-#### После сборки контейнеров, откройте браузер, указав в нем ip-адрес, который вы ввели в .env
+#### После сборки контейнеров, откройте браузер, указав в нем ip-адрес, который вы ввели в скрипте
 
 #### 4.3. Остановка контейнеров
 ```bash
@@ -68,6 +60,54 @@ docker-compose start
 ```bash
 docker-compose down
 ```
+
+#### Опциональная сбоорка в ручную:
+Исправляем .env файл на нужный IP-адрес:
+```
+HOST_IP=<ip-адрес>
+```
+
+Подгружаем .env файл
+```bash
+. .env
+```
+
+Собираем и поднимаем контейнеры
+```bash
+docker-compose up --build -d
+```
+*требуется указать IP-адрес в .env файле, на котором вы хотите собрать контейнеры*
+*Для остановки, старта и удаления контейнеров, воспользуйтесь командами выше*
+
+## Примеры запуска через скрипт и вручную:
+### Пример использования автоматического поднятия, через скрипт:
+<img width="744" alt="image" src="https://github.com/user-attachments/assets/fd8c06ce-7377-4959-afb0-7123f1d1ef05" />
+
+*Запускаем нужный скрипт и вводим ip-адрес в строке запроса*
+
+<img width="740" alt="image" src="https://github.com/user-attachments/assets/edf1ca5e-d20d-4eb6-b679-56e3118d00c9" />
+
+*Видим что контейнеры стартовали, значит можно переходить в браузер и ввоить нужный ip-адрес*
+
+<img width="1237" alt="image" src="https://github.com/user-attachments/assets/9697f42e-0730-4efc-aa64-7406d287eb6f" />
+
+
+### Пример использования ручного поднятия:
+
+<img width="174" alt="image" src="https://github.com/user-attachments/assets/4a6960ed-dc6a-4d87-93f7-2fe3addb41ff" />
+
+*Исправили ip-адрес*
+
+<img width="745" alt="image" src="https://github.com/user-attachments/assets/ad88a2b4-7428-474d-ad92-cb0d1aa68a6b" />
+
+*Удалили старые контейнеры, добавили в строку `. .env`, запустили контейнеры `docker-compose up --build -d`*
+
+<img width="749" alt="image" src="https://github.com/user-attachments/assets/3a00629a-eb67-47e8-bbdd-bd018042fd2c" />
+
+*Видим что контейнеры стартовали, значит можно переходить в браузер и ввоить нужный ip-адрес*
+
+<img width="1224" alt="image" src="https://github.com/user-attachments/assets/a738d6ed-250e-4efe-a0b9-0eb25fc40c9b" />
+
 
 ## Порты
 - Frontend (SPA) - ```:80```
